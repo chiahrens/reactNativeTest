@@ -4,13 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "ios:app:pushSauce": "curl -u ${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY} -X POST \"http://saucelabs.com/rest/v1/storage/${SAUCE_USERNAME}/react_native_test.app?overwrite=true\" -H \"Content-Type: application/octet-stream\" --data-binary @./ios/build/reactNativeTest/Build/Products/Debug-iphonesimulator/reactNativeTest.app",
-    "android:test": "DPRO_LOCATION=./test/automation/conf/data ./node_modules/.bin/magellan --config ./test/automation/magellan.json --nightwatch_config ./test/automation/conf/nightwatch.json --serial --max_test_attempts 1 --local_browser androidLocal --tags android",
-    "ios:test": "DPRO_LOCATION=./test/automation/conf/data ./node_modules/.bin/magellan --config ./test/automation/magellan.json --nightwatch_config ./test/automation/conf/nightwatch.json --serial --max_test_attempts 1 --local_browser iosLocal --tags ios",
-    "android:debug": "DPRO_LOCATION=./test/automation/conf/data ./node_modules/.bin/magellan --config ./test/automation/magellan.json --nightwatch_config ./test/automation/conf/nightwatch.json --serial --max_test_attempts 1 --local_browser androidDebug --tags 'android'",
-    "ios:debug": "DPRO_LOCATION=./test/automation/conf/data ./node_modules/.bin/magellan --config ./test/automation/magellan.json --nightwatch_config ./test/automation/conf/nightwatch.json --serial --max_test_attempts 1 --local_browser iosDebug --tags ios",
-    "ios:sauce": "DPRO_LOCATION=./test/automation/conf/data ./node_modules/.bin/magellan --config ./test/automation/magellan.json --nightwatch_config ./test/automation/conf/nightwatch.json --serial --max_test_attempts 1 --local_browser iosSauce --test test/automation/ios/test.js",
-    "android:sauce": "DPRO_LOCATION=./test/automation/conf/data ./node_modules/.bin/magellan --config ./test/automation/magellan.json --nightwatch_config ./test/automation/conf/nightwatch.json --serial --max_test_attempts 1 --local_browser androidSauce --test test/automation/android/test.js"
+    "android:test": "./node_modules/.bin/nightwatch -c ./test/automation/conf/nightwatch.json --e androidDebug --tags android",
+    "ios:test": "./node_modules/.bin/nightwatch -c ./test/automation/conf/nightwatch.json --e iosDebug --tags ios"
   },
   "dependencies": {
     "react": "16.8.3",
@@ -23,16 +18,11 @@
     "@babel/runtime": "^7.4.3",
     "appium": "^1.12.1",
     "babel-jest": "^24.7.1",
-    "dpro": "^1.2.0",
     "jest": "^24.7.1",
     "lodash": "^4.17.11",
     "metro-react-native-babel-preset": "^0.53.1",
     "nightwatch": "^0.9.21",
     "react-test-renderer": "16.8.3",
-    "testarmada-magellan": "11.0.1",
-    "testarmada-magellan-local-executor": "^2.0.0",
-    "testarmada-magellan-nightwatch-plugin": "^8.0.2",
-    "testarmada-magellan-saucelabs-executor": "^4.11.4",
     "testarmada-nightwatch-extra": "^5.1.9"
   },
   "jest": {
