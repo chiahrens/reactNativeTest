@@ -41,7 +41,7 @@ module.exports.command = function(using, selector, valueToSet, callback) {
       "xpath",
       platformName === "android"
         ? "//android.widget.TextView"
-        : "XCUIElementTypePickerWheel",
+        : "//XCUIElementTypePickerWheel",
       result => {
         this.elementIdText(result.value.ELEMENT, result => {
           return callback(result.value);

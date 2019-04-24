@@ -15,21 +15,10 @@
     "./test/automation/lib/custom_assertions"
   ],
   "globals_path": "./test/automation/lib/globals.js",
-  "selenium": {
-    "start_process": true,
-    "server_path": "./node_modules/selenium-server/lib/runner/selenium-server-standalone-3.4.0.jar",
-    "log_path": "reports",
-    "host": "127.0.0.1",
-    "port": 4723,
-    "cli_args": {
-      "webdriver.chrome.driver": "./node_modules/chromedriver/lib/chromedriver/chromedriver",
-      "webdriver.ie.driver": ""
-    }
-  },
   "test_settings": {
     "default": {
       "launch_url": "http://127.0.0.1",
-      "selenium_port": 4723,
+      "selenium_port": 10000,
       "selenium_host": "localhost",
       "silent": true,
       "sync_test_names": true,
@@ -39,12 +28,7 @@
       },
       "globals": {
         "waitForConditionTimeout": 180000,
-        "asyncHookTimeout": 180000,
-        "syncModeBrowserList": [
-          "safari:10",
-          "iphone",
-          "ipad"
-        ]
+        "asyncHookTimeout": 180000
       },
       "max_timeout": 180000,
       "request_timeout_options": {
@@ -56,7 +40,6 @@
       "skip_testcases_on_fail": true,
       "desiredCapabilities": {
         "app": "./android/app/build/outputs/apk/debug/app-debug.apk",
-        "appiumVersion": "1.12.1",
         "platformName": "Android",
         "platformVersion": "8.1.0",
         "deviceName": "Pixel_2_XL_API_28"
@@ -74,7 +57,6 @@
       "skip_testcases_on_fail": true,
       "desiredCapabilities": {
         "app": "./ios/build/reactNativeTest/Build/Products/Debug-iphonesimulator/reactNativeTest.app",
-        "appiumVersion": "1.12.1",
         "automationName": "XCUITest",
         "platformName": "iOS",
         "platformVersion": "12.0",
@@ -91,34 +73,25 @@
       "use_xpath": true
     },
     "androidDebug": {
-      "skip_testcases_on_fail": true,
       "desiredCapabilities": {
         "app": "/Users/cahrens/dev/chiahrens/reactNativeTest/android/app/build/outputs/apk/debug/app-debug.apk",
-        "appiumVersion": "1.12.1",
         "platformName": "Android",
         "platformVersion": "8.1.0",
         "deviceName": "Pixel_2_XL_API_28"
       },
-      "selenium_host": "localhost",
-      "selenium_port": 10000,
       "selenium": {
         "start_process": false
       },
       "use_xpath": true
     },
     "iosDebug": {
-      "skip_testcases_on_fail": true,
       "desiredCapabilities": {
         "app": "/Users/cahrens/dev/chiahrens/reactNativeTest/ios/build/reactNativeTest/Build/Products/Debug-iphonesimulator/reactNativeTest.app",
-        "appiumVersion": "1.12.1",
         "automationName": "XCUITest",
         "platformName": "iOS",
         "platformVersion": "12.0",
-        "deviceName": "iPhone X",
-        "waitForAppScript": "true"
+        "deviceName": "iPhone X"
       },
-      "selenium_host": "localhost",
-      "selenium_port": 10000,
       "selenium": {
         "start_process": false
       },
