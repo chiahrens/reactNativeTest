@@ -10,8 +10,6 @@ npm install -g react-native-cli
 
 npm install
 
-// you might have to run this. I'm not sure...
-react-native link react-native-gesture-handler
 ```
 
 Then update nightwatch.json to match your config for your emulator - androidLocal, iosLocal, androidDebug, iosDebug
