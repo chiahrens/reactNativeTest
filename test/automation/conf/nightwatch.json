@@ -93,7 +93,7 @@
     "androidDebug": {
       "skip_testcases_on_fail": true,
       "desiredCapabilities": {
-        "app": "/Users/cahrens/dev/cahrens/reactNativeTest/android/app/build/outputs/apk/debug/app-debug.apk",
+        "app": "/Users/cahrens/dev/chiahrens/reactNativeTest/android/app/build/outputs/apk/debug/app-debug.apk",
         "appiumVersion": "1.12.1",
         "platformName": "Android",
         "platformVersion": "8.1.0",
