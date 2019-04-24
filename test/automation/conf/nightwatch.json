@@ -109,7 +109,7 @@
     "iosDebug": {
       "skip_testcases_on_fail": true,
       "desiredCapabilities": {
-        "app": "/Users/cahrens/dev/cahrens/reactNativeTest/ios/build/reactNativeTest/Build/Products/Debug-iphonesimulator/reactNativeTest.app",
+        "app": "/Users/cahrens/dev/chiahrens/reactNativeTest/ios/build/reactNativeTest/Build/Products/Debug-iphonesimulator/reactNativeTest.app",
         "appiumVersion": "1.12.1",
         "automationName": "XCUITest",
         "platformName": "iOS",

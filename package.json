@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "android:test": "./node_modules/.bin/nightwatch -c ./test/automation/conf/nightwatch.json --e androidDebug --a android",
-    "ios:test": "./node_modules/.bin/nightwatch -c ./test/automation/conf/nightwatch.json --e iosDebug --a ios"
+    "android:test": "./node_modules/.bin/nightwatch -c ./test/automation/conf/nightwatch.json --e androidLocal --a android",
+    "ios:test": "./node_modules/.bin/nightwatch -c ./test/automation/conf/nightwatch.json --e iosLocal --a ios",
+    "android:debug": "./node_modules/.bin/nightwatch -c ./test/automation/conf/nightwatch.json --e androidDebug --a android",
+    "ios:debug": "./node_modules/.bin/nightwatch -c ./test/automation/conf/nightwatch.json --e iosDebug --a ios"
   },
   "dependencies": {
     "react": "16.8.3",
