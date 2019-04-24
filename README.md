@@ -14,25 +14,49 @@ npm install
 react-native link react-native-gesture-handler
 ```
 
-Then update nightwatch.json to match your config for your emulator - androidLocal for android and iosLocal for ios.
+Then update nightwatch.json to match your config for your emulator - androidLocal, iosLocal, androidDebug, iosDebug
 
 
-Android
+Run Android tests with built-in appium
 ```
 // This will build the apk (only once, takes long time), start the react-native server, and the apk on the android emulator.
 react-native run-android
 
+// Modify test/automation/conf/nightwatch.json profile androidLocal with respective platformName and platformVersion
 // Run the android test
 npm run android:test
 ```
 
-IOS
+Run iOS tests with built-in appium
 ```
 // This will build the app (only once, takes long time), start the react-native server, and the app on the ios simulator.
 react-native run-ios
 
+// Modify test/automation/conf/nightwatch.json profile iosLocal with respective platformName and platformVersion
 // Run the ios test
 npm run ios:test
+```
+
+Optionally, and for quicker dev experience, you can start appium desktop separately, then run:
+
+Run Android tests using external Appium Desktop
+```
+// This will build the apk (only once, takes long time), start the react-native server, and the apk on the android emulator.
+react-native run-android
+
+// Modify test/automation/conf/nightwatch.json profile androidDebug with respective platformName and platformVersion
+// Run the android test
+npm run android:debug
+```
+
+Run iOS tests using external Appium Desktop
+```
+// This will build the app (only once, takes long time), start the react-native server, and the app on the ios simulator.
+react-native run-ios
+
+// Modify test/automation/conf/nightwatch.json profile iosDebug with respective platformName and platformVersion
+// Run the ios test
+npm run ios:debug
 ```
 
 Refer to https://developers.perfectomobile.com/display/TT/React-Native+and+unique+identifiers on the different accessibily identifiers that need to be used for ios and android. 
