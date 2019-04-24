@@ -39,6 +39,8 @@ Optionally, and for quicker dev experience, you can start appium desktop separat
 
 Run Android tests using external Appium Desktop
 ```
+// Start Appium Desktop on the default 10000 port
+
 // This will build the apk (only once, takes long time), start the react-native server, and the apk on the android emulator.
 react-native run-android
 
@@ -49,6 +51,8 @@ npm run android:debug
 
 Run iOS tests using external Appium Desktop
 ```
+// Start Appium Desktop on the default 10000 port
+
 // This will build the app (only once, takes long time), start the react-native server, and the app on the ios simulator.
 react-native run-ios
 
